@@ -1,0 +1,79 @@
+/* -----------------
+    Box Sizing Fix
+--------------------*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* -----------------
+    Global Styles
+--------------------*/
+
+body {
+    background: #202020;
+    font-size: 16px;
+    font-family:  'skranji', 'Segoe UI', Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* -----------------
+    Header Styles
+--------------------*/
+
+#main-header {
+    height: 100vh;  
+    position: relative;
+    overflow: hidden;
+}
+
+.bg {
+    background: url('../img/blackbg.jpg') no-repeat center center;
+    background-size: cover;
+    min-height:100vh;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: scale(1.1);
+}
+
+.site-title {
+    display: grid;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    font-family: 'Bungee Shade','skranji', 'Segoe UI', Verdana, sans-serif;
+    height: 250px;
+}
+
+.navbar {
+    display: grid;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 20px;
+    color: #fff;
+    font-size: 1.4em;
+    font-family: 'Gugi', 'Segoe UI', Verdana, sans-serif;
+    text-transform: uppercase;
+    width: 0;
+    transition: all .5s;
+}
+
+.navbar a:hover{
+    width: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
