@@ -1,9 +1,9 @@
 $(document).ready(function(){ 
-    var lFollowX = 0,
-        lFollowY = 0,
-        x = 0,
-        y = 0,
-        friction = 1 / 30;
+var lFollowX = 0,
+    lFollowY = 0,
+    x = 0,
+    y = 0,
+    friction = 1 / 30;
 
 function moveBackground() {
   x += (lFollowX - x) * friction;
@@ -28,4 +28,5 @@ $(window).on('mousemove click', function(e) {
 });
 
 moveBackground();
+// Effect inspired by https://codepen.io/vajkri/pen/grgQmb
 });
