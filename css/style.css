@@ -104,39 +104,8 @@ body {
     background: radial-gradient(circle, rgb(5, 156, 238), #202020);
 }
 
-/* ---------------------------
-    About Section Grid Styles
-------------------------------*/
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: minmax(150px, auto);
-
-}
-
-/* -----------------
-    Video Styles
---------------------*/
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-}
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 /* -------------------------------
-    Other Grid Item Styles Styles
+    Grid Item Styles
 ----------------------------------*/
 
 .box {
@@ -149,21 +118,52 @@ body {
     transform: scale(0.95);
 }
 .sec-bg:nth-child(1) {
-    background: url(../img/pc.png) center center;
-    background-size: cover;
-    
+    background: url(../img/pink-ruby.jpg) center center;
 }
 .sec-bg:nth-child(2) {
     background: url(../img/pc2.jpeg) center center;
-    background-size: cover;
 }
 .sec-bg:nth-child(3) {
     background: url(../img/pc3.jpeg) center center;
-    background-size: cover;
 }
 .sec-bg:nth-child(4) {
     background: url(../img/pc4.jpeg) center center;
+}
+.sec-bg {
     background-size: cover;
+}
+
+/* -------------------------------
+    Grid Item Link Styles
+----------------------------------*/
+
+.box a {
+    text-decoration: none;
+    font-family: 'Gugi', 'Segoe UI', Verdana, sans-serif;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.596);
+    padding: 20px 50px;
+    position: relative;
+    top: 50%; 
+    font-size: 1.2em;
+    transition: background-color .5s, color .5s, padding .5s;
+}
+
+.box a:hover {
+    background-color: rgba(255, 255, 255, 0.596);
+    color: #000;
+}
+
+
+/* ---------------------------
+    About Section Grid Styles
+------------------------------*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+
 }
 
 #about {
@@ -196,6 +196,30 @@ body {
     text-decoration: none;
 }
 
+/* -----------------
+    Video Styles
+--------------------*/
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* -------------------------
+    Connect Section Styles
+----------------------------*/
+
 .icons {
     font-size: 3em;
     color: #fff;
@@ -227,9 +251,11 @@ body {
 .contact-bg:nth-child(4) {
     background: #24292E;
 }
+
 /* -----------------
     Footer Styles
 --------------------*/
+
 .copyright {
     display: flex;
     justify-content: center;
@@ -237,6 +263,10 @@ body {
     background: rgb(26, 25, 25);
     color: white;
 }
+
+/* -----------------------
+    Desktop Media Queries
+--------------------------*/
 
 @media (min-width: 960px) {
     .grid {

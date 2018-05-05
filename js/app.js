@@ -55,4 +55,14 @@ moveBackground();
     } // End if
   });
 
+  // Portfolio Showcase Link Box Animation
+  $('.link-box').hide();
+
+  $('.box').mouseover(function () {
+    $(this).find('.link-box').stop().fadeIn();
+  });
+  $('.box').mouseout(function () {
+    $(this).find('.link-box').stop().fadeOut();
+  });
+
 });
