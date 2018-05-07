@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paul Scott's Personal Website and Portfolio">
+    <meta name="keywords" content="Paul,Scott,Portfolio,web,developer,HTML,CSS,JavaScript">
+    <meta name="author" content="Paul Elijah Scott">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>LijahTheDev</title>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Gugi|Skranji:400,700" rel="stylesheet">
@@ -11,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header id="main-header">
+    <header id="main-header" role="banner">
         <div class="bg"></div>
         <div class="site-title animated flash" id="home">lijahthedev</div>
         <nav class="navbar">
@@ -24,84 +27,86 @@
         </div>
     </header>
 
-    <main id="main">
-        <section id="work" class="grid">
+    <main id="main" role="main">
+        <article role="article">
+            <section id="work" class="grid">
 
-            <div class="sec1 box sec-bg">
-                <a href="http://laine-blogs.lijahthedev.com/" class="link-box">Laine Blogs</a>  
-            </div>
-            
-            <div class="sec2 box sec-bg">
-                <a href="#connect" class="link-box">Design</a>
-            </div>
-            
-            <div class="sec3 box sec-bg">
-                <a href="#connect" class="link-box">Advance Architecture</a>
-            </div>
-
-            <div class="sec4 box sec-bg">
-                <a href="#connect" class="link-box">Hard Work</a>
-            </div>
-            
-        </section>
-
-        <section id="about">
-        
-            <div class="about-bio">
-                <p class="bio-body-text">
-                    <span class="bio-name bio-styles">Paul E Scott</span>
-                    <span class="bio-styles">Welcome</span>, <br> I'm a 19-year-old 
-                    <span class="bio-styles">Web Developer</span> located in Central Pennsylvania. <br> I specialize in 
-                    <span class="bio-styles">UI/UX Design</span>, 
-                    <span class="bio-styles">HTML5</span>, 
-                    <span class="bio-styles">CSS3</span>, and 
-                    <span class="bio-styles">JavaScript</span>.
-                    Been practicing 
-                    <span class="bio-styles">IT</span> since 11 years old and <span class="bio-styles">STILL</span> constantly learning new technologies and <span class="bio-styles">skills</span> to increase my 
-                    <span class="bio-styles">technical knowledge</span> and 
-                    <span class="bio-styles">wisdom</span>.
-                </p>
-            </div>
-            <div class="about-video">
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Alz3PN4rxj4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="sec1 box sec-bg">
+                    <a href="http://laine-blogs.lijahthedev.com/" class="link-box" title="Simple Blog Website | Laine Blogs">Laine Blogs <i class="fas fa-angle-double-right box-icons"></i></a>  
                 </div>
-            </div>
-        
-        </section>
-
-        <section id="connect" class="grid">
-        
-            <div class="sec1 contact-bg">
-                <a href="https://www.facebook.com/paul.scott.3994885" title="Facebook" target="_blank">
-                    <i class="fab fa-facebook-f icons"></i>
-                </a>
-            </div>
-            
-            <div class="sec2 contact-bg">
-                <a href="https://www.instagram.com/lijahthedev/" title="Instagram" target="_blank">
-                    <i class="fab fa-instagram icons"></i>
-                </a>
-            </div>
-            
-            <div class="sec3 contact-bg">
-                <a href="https://www.linkedin.com/in/paul-scott-62603115a/" title="Linkedin" target="_blank">
-                    <i class="fab fa-linkedin-in icons"></i>
-                </a>
-            </div>
-            
-            <div class="sec4 contact-bg">
                 
-                <a href="https://github.com/LijahTheDev" title="GitHub" target="_blank">
-                    <i class="fab fa-github icons"></i>
-                </a>
-            </div>
-        
-        </section>
+                <div class="sec2 box sec-bg">
+                    <a href="#work" class="link-box" title="Coming Soon">Design <i class="fas fa-wrench"></i></a>
+                </div>
+                
+                <div class="sec3 box sec-bg">
+                    <a href="#work" class="link-box" title="Coming Soon">Advance Architecture <i class="fas fa-wrench"></i></a>
+                </div>
 
+                <div class="sec4 box sec-bg">
+                    <a href="#work" class="link-box" title="Coming Soon">Hard Work <i class="fas fa-wrench"></i></a>
+                </div>
+                
+            </section>
+
+            
+            <section id="about">
+            
+                <div class="about-bio">
+                    <p class="bio-body-text">
+                        <span class="bio-name bio-styles">Paul E Scott</span>
+                        <span class="bio-styles">Welcome</span>, <br> I'm a 19-year-old 
+                        <span class="bio-styles">Web Developer</span> located in Central Pennsylvania. <br> I specialize in 
+                        <span class="bio-styles">UI/UX Design</span>, 
+                        <span class="bio-styles">HTML5</span>, 
+                        <span class="bio-styles">CSS3</span>, and 
+                        <span class="bio-styles">JavaScript</span>.
+                        Been practicing 
+                        <span class="bio-styles">IT</span> since 16 years old and <span class="bio-styles">STILL</span> constantly learning new technologies and <span class="bio-styles">skills</span> to increase my 
+                        <span class="bio-styles">technical knowledge</span> and 
+                        <span class="bio-styles">wisdom</span>.
+                    </p>
+                </div>
+                <div class="about-video">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Alz3PN4rxj4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            
+            </section>
+
+            <section id="connect" class="grid">
+            
+                <div class="sec1 contact-bg">
+                    <a href="https://www.facebook.com/paul.scott.3994885" title="Facebook" target="_blank">
+                        <i class="fab fa-facebook-f icons"></i>
+                    </a>
+                </div>
+                
+                <div class="sec2 contact-bg">
+                    <a href="https://www.instagram.com/lijahthedev/" title="Instagram" target="_blank">
+                        <i class="fab fa-instagram icons"></i>
+                    </a>
+                </div>
+                
+                <div class="sec3 contact-bg">
+                    <a href="https://www.linkedin.com/in/paul-scott-62603115a/" title="Linkedin" target="_blank">
+                        <i class="fab fa-linkedin-in icons"></i>
+                    </a>
+                </div>
+                
+                <div class="sec4 contact-bg">
+                    
+                    <a href="https://github.com/LijahTheDev" title="GitHub" target="_blank">
+                        <i class="fab fa-github icons"></i>
+                    </a>
+                </div>
+            
+            </section>
+        </article>
     </main>
 
-    <footer class="copyright">
+    <footer class="copyright" role="contentinfo">
         <p>&copy; 2018</p>
     </footer>
 

@@ -154,6 +154,26 @@ body {
     color: #000;
 }
 
+.box-icons {
+    font-size: 1.5em;
+    vertical-align: sub;
+    position: relative;
+    transform: scale(1);
+    animation: pluse 2s  linear infinite alternate; 
+}
+
+@keyframes pluse {
+    0% {
+        left: 10px;
+    }
+    50% {
+        left: 30px;
+        color: #000000;
+    }
+    100% {
+        left: 10px;
+    }
+}
 
 /* ---------------------------
     About Section Grid Styles
@@ -185,8 +205,8 @@ body {
 
 .bio-styles {
     font-family: 'Gugi', 'Segoe UI', Verdana, sans-serif;
-    color: #fff;
-    text-decoration: underline;
+    color: rgb(15, 139, 255);
+    
 }
 
 .bio-name {
@@ -194,6 +214,7 @@ body {
     font-size: 3em;
     margin-bottom: 50px;
     text-decoration: none;
+    color: #fff;
 }
 
 /* -----------------
