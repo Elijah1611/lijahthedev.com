@@ -1,5 +1,6 @@
 $(document).ready(function(){ 
-var lFollowX = 0,
+// Moving Background Effect
+  var lFollowX = 0,
     lFollowY = 0,
     x = 0,
     y = 0,
