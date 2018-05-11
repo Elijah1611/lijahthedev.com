@@ -121,13 +121,13 @@ body {
     background: url(../img/pink-ruby.jpg) center center;
 }
 .sec-bg:nth-child(2) {
-    background: url(../img/pc2.jpeg) center center;
+    background: url(../img/landing.jpeg) center center;
 }
 .sec-bg:nth-child(3) {
     background: url(../img/pc3.jpeg) center center;
 }
 .sec-bg:nth-child(4) {
-    background: url(../img/pc4.jpeg) center center;
+    background: url(../img/pc2.jpeg) center center;
 }
 .sec-bg {
     background-size: cover;
