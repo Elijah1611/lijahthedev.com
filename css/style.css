@@ -335,3 +335,9 @@ body {
     right: 50px;
     }
 }
+
+@media screen and (max-height: 453px) and (orientation: landscape) {
+    .navbar {
+        display: inline-block;
+    }
+}
