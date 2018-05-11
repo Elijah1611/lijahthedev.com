@@ -294,10 +294,10 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
-        "bio bio video video"
-        "bio bio video video"
-        "social social contact contact"
-        "social social contact contact";
+        "linkedin linkedin youtube youtube"
+        "linkedin linkedin youtube youtube"
+        "github github insta insta"
+        "github github insta insta";
         grid-auto-rows: minmax(150px, auto);
     }
 
@@ -318,16 +318,16 @@ body {
         width: 50%;
     }
     .sec1 {
-        grid-area: bio;
+        grid-area: youtube;
     }
     .sec2 {
-        grid-area: video;
+        grid-area: insta;
     }
     .sec3 {
-        grid-area: social; 
+        grid-area: linkedin; 
     }
     .sec4 {
-        grid-area: contact;
+        grid-area: github;
     }
 
     .top {
