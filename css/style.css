@@ -206,7 +206,7 @@ body {
 .bio-styles {
     font-family: 'Gugi', 'Segoe UI', Verdana, sans-serif;
     color: rgb(15, 139, 255);
-    
+    text-shadow: 2px 2px #000;
 }
 
 .bio-name {
