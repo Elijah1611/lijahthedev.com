@@ -118,16 +118,16 @@ body {
     transform: scale(0.95);
 }
 .sec-bg:nth-child(1) {
-    background: url(../img/landing.jpeg) no-repeat center center;
+    background: url(../img/work.jpg) no-repeat center center;
 }
 .sec-bg:nth-child(2) {
-    background: url(../img/tech.jpeg) no-repeat center center;
+    background: url(../img/tech.jpg) no-repeat center center;
 }
 .sec-bg:nth-child(3) {
-    background: url(../img/pink-ruby.jpg) no-repeat center center;
+    background: url(../img/colorsmoke.jpg) no-repeat center bottom;
 }
 .sec-bg:nth-child(4) {
-    background: url(../img/design.jpeg) no-repeat center top;
+    background: url(../img/design.jpg) no-repeat center top;
 }
 .sec-bg {
     background-size: cover;
@@ -189,7 +189,7 @@ body {
 #about {
     display: flex;
     flex-direction: column;
-    background: url(../img/phone.jpeg) no-repeat fixed;
+    background: url(../img/phone.jpg) no-repeat fixed;
     background-size: cover;
 }
 .about-video {
