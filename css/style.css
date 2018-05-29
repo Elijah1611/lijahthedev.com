@@ -19,7 +19,7 @@ html {
 
 body {
     background: #202020;
-    font-size: 16px;
+    font-size: 100%;
     font-family:  'skranji', 'Segoe UI', Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -70,7 +70,7 @@ body {
 
 .navbar a {
     text-decoration: none;
-    padding: 20px;
+    padding: 1.2rem;
     color: #fff;
     font-size: 1.4em;
     font-family: 'Gugi', 'Segoe UI', Verdana, sans-serif;
@@ -106,7 +106,7 @@ body {
 }
 
 /* -----------------------------------
-    Work Grid Item Image Box
+    Work Grid Image Box
 --------------------------------------*/
 
 .box {
@@ -115,7 +115,7 @@ body {
 }
 .box:hover {
     filter: grayscale(0);
-    box-shadow: 0 0 15px 5px #000000;
+    box-shadow: 0 0 .93rem .31rem #000000;
     transform: scale(0.95);
 }
 .sec-bg:nth-child(1) {
@@ -135,7 +135,7 @@ body {
 }
 
 /* -------------------------------
-    Work Grid Item Link Styles
+    Work Grid Link Styles
 ----------------------------------*/
 
 .box a {
@@ -143,10 +143,10 @@ body {
     font-family: 'Gugi', 'Segoe UI', Verdana, sans-serif;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.596);
-    padding: 20px 50px;
+    padding: 1.25rem 2.2rem;
     position: relative;
     top: 50%; 
-    font-size: 1.2em;
+    font-size: 1rem;
     transition: background-color .5s, color .5s, padding .5s;
 }
 
@@ -156,7 +156,7 @@ body {
 }
 
 .box-icons {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     vertical-align: sub;
     position: relative;
     transform: scale(1);
@@ -194,26 +194,26 @@ body {
     background-size: cover;
 }
 .about-video {
-    box-shadow: 3px 3px 15px 6px #131313;
+    box-shadow: .187rem .187rem .937rem .375rem #131313;
 }
 .bio-body-text { 
     font-size: 1.2rem;
     color: #fff;
-    text-shadow: 3px 3px 5px #1a1a1a;
-    padding: 10px 30px;
-    line-height: 2em;
+    text-shadow: .187rem .187rem .375rem #1a1a1a;
+    padding: 0.625rem  1.875rem;
+    line-height: 2.5rem;
 }
 
 .bio-styles {
     font-family: 'Gugi', 'Segoe UI', Verdana, sans-serif;
     color: rgb(15, 139, 255);
-    text-shadow: 2px 2px #000;
+    text-shadow: .125rem .125rem #000;
 }
 
 .bio-name {
     display: block;
-    font-size: 3em;
-    margin-bottom: 50px;
+    font-size: 4rem;
+    margin-bottom: 3.125rem;
     text-decoration: none;
     color: #fff;
 }
@@ -225,7 +225,9 @@ body {
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
+    padding-top: 1.875rem; 
+    height: 0; 
+    overflow: hidden;
 }
 
 .video-container iframe,
@@ -243,9 +245,9 @@ body {
 ----------------------------*/
 
 .icons {
-    font-size: 3em;
+    font-size: 3rem;
     color: #fff;
-    text-shadow: 3px 3px 10px #333;
+    text-shadow: .187rem .187rem .625rem #333;
     transition: color .5s;
 }
 .icons:hover {
@@ -259,7 +261,7 @@ body {
 }
 .contact-bg:hover {
     font-size: 1.5em;
-    box-shadow: inset 0 0 25px #000000;
+    box-shadow: inset 0 0 1.563rem #000000;
 }
 .contact-bg:nth-child(1) {
     background: #c40000;
@@ -334,6 +336,11 @@ body {
     .top-btn {
     bottom: 30px;
     right: 50px;
+    }
+
+    .box a {
+        font-size: 1.2rem;
+        padding: 1.25rem 3.125rem;
     }
 }
 
