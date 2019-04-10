@@ -1,9 +1,9 @@
 <template>
   <div class="skills">
     <v-progress-linear v-model="value" color="blue"></v-progress-linear>
-    <app-header :navLinks="links" :image="image"></app-header>
+    <app-header :navLinks="links" :image="image" class="scuff"></app-header>
 
-    <v-timeline dark>
+    <v-timeline dark class="smoke">
       <v-timeline-item v-for="(item, i) in items" :key="i" large>
         <template v-slot:icon>
           <v-avatar>
@@ -101,7 +101,7 @@ export default {
       const winHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
       const perc = (100 * scrollPos) / (docHeight - winHeight);
-      this.value = Math.floor(perc);
+      this.value = Math.floor(Math.round(perc));
     }
   },
   created() {
@@ -114,6 +114,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.scuff {
+  background: url("../assets/scuff.png");
+}
+.smoke {
+  background: url("../assets/smoke.png") center;
+}
+
 .text-shadow {
   text-shadow: 1px 1px 2px #000;
 }

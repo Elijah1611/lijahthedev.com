@@ -9,7 +9,7 @@ export default new Vuex.Store({
 			{
 				title: "The Venue",
 				description:
-					"The Venue is a modern event landing page for future car events.",
+					"The Venue is a modern event landing page for future car events",
 				year: 2019,
 				lang: { name: "React", color: "#61dafb" },
 				color: "white",
@@ -24,7 +24,7 @@ export default new Vuex.Store({
 			{
 				title: "Domnoo",
 				description:
-					"The Venue is a modern event landing page for future car events.",
+					"The Venue is a modern event landing page for future car events",
 				year: 2019,
 				lang: { name: "Vue", color: "#42b983" },
 				color: "red lighten-1",
@@ -55,7 +55,7 @@ export default new Vuex.Store({
 			{
 				title: "Pro Web Solutions",
 				description:
-					"A business practice landing page with CSS Grid, Flexbox. and jQuery.",
+					"A business practice landing page with CSS Grid, Flexbox. and jQuery",
 				year: 2019,
 				lang: { name: "CSS", color: "blue" },
 				color: "grey darken-1",
@@ -84,7 +84,7 @@ export default new Vuex.Store({
 			{
 				title: "React Movie Table",
 				description:
-					"A react movie table that I'm working on while learning react.",
+					"A react movie table that I'm working on while learning react",
 				year: 2019,
 				lang: { name: "React", color: "#61dafb" },
 				color: "yellow lighten-1",

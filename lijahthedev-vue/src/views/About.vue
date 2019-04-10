@@ -37,7 +37,7 @@ export default {
       const winHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
       const perc = (100 * scrollPos) / (docHeight - winHeight);
-      this.value = Math.floor(perc);
+      this.value = Math.floor(Math.round(perc));
     }
   },
   created() {

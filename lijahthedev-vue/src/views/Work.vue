@@ -1,28 +1,16 @@
 <template>
   <div class="work">
+    <v-progress-linear v-model="value" color="red"></v-progress-linear>
     <appHeader :navLinks="links" :image="headerImage"></appHeader>
     <v-container fluid grid-list-sm>
       <v-layout row wrap>
-        <v-flex d-flex xs12 md12>
-          <v-layout row wrap>
-            <v-flex d-flex xs12 md8 offset-md2>
-              <ProjectCard :index="0"></ProjectCard>
-            </v-flex>
-            <v-flex v-for="n in 2" :key="n" d-flex xs12 sm6>
-              <ProjectCard :index="(1 + n) -1"></ProjectCard>
-            </v-flex>
-          </v-layout>
-        </v-flex>
         <v-flex d-flex xs12>
           <v-layout row wrap>
-            <v-flex d-flex xs12 sm12 md4>
-              <ProjectCard :index="3"></ProjectCard>
+            <v-flex v-for="n in 1" :key="n" d-flex xs12 md6 offset-md3>
+              <ProjectCard :index="n - 1" :height="280"></ProjectCard>
             </v-flex>
-            <v-flex d-flex xs12 sm6 md4>
-              <ProjectCard :index="4"></ProjectCard>
-            </v-flex>
-            <v-flex d-flex xs12 sm6 md4>
-              <ProjectCard :index="5"></ProjectCard>
+            <v-flex v-for="n in 5" :key="n + 5" d-flex xs12 sm4>
+              <ProjectCard :index="(1 + n) -1" :height="200"></ProjectCard>
             </v-flex>
           </v-layout>
         </v-flex>
@@ -46,15 +34,36 @@ export default {
       projects,
       image,
       headerImage,
+      value: 0,
       links: [
         { route: "/skills", text: "Skills" },
         { route: "/work", text: "Work" },
         { route: "/connect", text: "Connect" }
       ]
     };
+  },
+  methods: {
+    handleScroll() {
+      const scrollPos = window.scrollY;
+      const winHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      const perc = (100 * scrollPos) / (docHeight - winHeight);
+      this.value = Math.floor(Math.round(perc));
+    }
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.v-progress-linear {
+  position: fixed;
+  z-index: 50;
+  margin-top: 0;
+}
 </style>

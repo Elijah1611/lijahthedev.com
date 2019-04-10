@@ -11,7 +11,7 @@
           round
         >{{ link.name }}</v-btn>
         <v-flex primary lighten-2 py-3 text-xs-center white--text xs12>
-          &copy;2019 —
+          2019 —
           <strong>LijahTheDev</strong>
         </v-flex>
       </v-layout>

@@ -1,7 +1,7 @@
 <template>
   <main class="about">
     <v-parallax dark :src="image" height="500">
-      <v-layout align-center column justify-center>
+      <v-layout align-center column justify-center class="overlay">
         <h2 class="display-2 font-weight-thin mb-3">Paul Scott</h2>
         <h3 class="headline profession">Front-End Developer</h3>
         <p
@@ -50,6 +50,10 @@ export default {
 $shadow-1: #2873ff;
 $shadow-2: #0059ff;
 
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
 .name-heading {
   text-shadow: 3px 3px 5px #000;
 }
@@ -59,7 +63,7 @@ $shadow-2: #0059ff;
 }
 
 .bio {
-  background: #000;
+  background: url("../../assets/smoke.png") left bottom;
   padding: 5rem 0;
   color: #fff;
 }

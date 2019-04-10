@@ -13,7 +13,8 @@ import {
 	faHome,
 	faLaptopCode,
 	faInfoCircle,
-	faWindowMaximize
+	faWindowMaximize,
+	faFileAlt
 } from "@fortawesome/free-solid-svg-icons";
 import {
 	faVuejs,
@@ -21,7 +22,9 @@ import {
 	faReact,
 	faCss3Alt,
 	faPython,
-	faGithub
+	faGithub,
+	faLinkedin,
+	faYoutube
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -38,7 +41,10 @@ library.add(
 	faPython,
 	faGithub,
 	faWindowMaximize,
-	faInfoCircle
+	faInfoCircle,
+	faLinkedin,
+	faFileAlt,
+	faYoutube
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
