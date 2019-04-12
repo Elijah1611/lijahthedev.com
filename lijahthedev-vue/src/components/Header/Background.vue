@@ -1,5 +1,5 @@
 <template>
-  <div class="bg" v-mousefollower:120 :style="bgImg"></div>
+  <div class="bg" v-mousefollower:30 :style="bgImg"></div>
 </template>
 
 <script>
