@@ -14,7 +14,7 @@
         <v-card-actions>
           <v-layout align-end justify-center row fill-height>
             <v-flex>
-              <v-chip small color="red" text-color="white">{{projects[index].year}}</v-chip>
+              <v-chip small color="black" text-color="white">{{projects[index].year}}</v-chip>
               <v-chip
                 small
                 :color="projects[index].lang.color"

@@ -6,11 +6,11 @@
       <v-layout row wrap>
         <v-flex d-flex xs12>
           <v-layout row wrap>
-            <v-flex v-for="n in 1" :key="n" d-flex xs12 md6 offset-md3>
+            <v-flex v-for="n in 2" :key="n" d-flex xs12 md6>
               <ProjectCard :index="n - 1" :height="280"></ProjectCard>
             </v-flex>
-            <v-flex v-for="n in 5" :key="n + 5" d-flex xs12 sm4>
-              <ProjectCard :index="(1 + n) -1" :height="200"></ProjectCard>
+            <v-flex v-for="n in 6" :key="n + 1" d-flex xs12 sm4>
+              <ProjectCard :index="(2 + n) -1" :height="200"></ProjectCard>
             </v-flex>
           </v-layout>
         </v-flex>
@@ -26,6 +26,7 @@ import appFooter from "../components/Footer/Footer.vue";
 import ProjectCard from "../components/Content/ProjectCard";
 import image from "../assets/black-mount.jpg";
 import headerImage from "../assets/black-design3.jpg";
+import { mapMutations, mapState } from "vuex";
 export default {
   components: { ProjectCard, appHeader, appFooter },
   data() {
@@ -34,7 +35,7 @@ export default {
       projects,
       image,
       headerImage,
-      value: 0,
+
       links: [
         { route: "/skills", text: "Skills" },
         { route: "/work", text: "Work" },
@@ -42,14 +43,11 @@ export default {
       ]
     };
   },
+  computed: {
+    ...mapState(["value"])
+  },
   methods: {
-    handleScroll() {
-      const scrollPos = window.scrollY;
-      const winHeight = window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight;
-      const perc = (100 * scrollPos) / (docHeight - winHeight);
-      this.value = Math.floor(Math.round(perc));
-    }
+    ...mapMutations(["handleScroll"])
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);

@@ -1,6 +1,6 @@
 <template>
   <v-app id="app" style="background: none">
-    <transition name="bounce">
+    <transition name="zoom">
       <router-view/>
     </transition>
   </v-app>
@@ -31,17 +31,16 @@ a {
   text-decoration: none;
 }
 
-.bounce-enter-active {
-  animation: bounce-in 0.5s;
+.zoom-enter-active {
+  animation: zoom-in 0.8s;
 }
-@keyframes bounce-in {
+@keyframes zoom-in {
   0% {
+    opacity: 0;
     transform: scale(0);
   }
-  50% {
-    transform: scale(1.1);
-  }
   100% {
+    opacity: 1;
     transform: scale(1);
   }
 }

@@ -12,6 +12,7 @@ import appHeader from "@/components/Header/Header.vue";
 import appFooter from "../components/Footer/Footer.vue";
 import appConnectBox from "@/components/Content/ConnectBox.vue";
 import image from "../assets/black-design2.jpg";
+import { mapState, mapMutations } from "vuex";
 
 export default {
   name: "connect",
@@ -23,7 +24,6 @@ export default {
   data() {
     return {
       image,
-      value: 0,
       links: [
         { route: "/skills", text: "Skills" },
         { route: "/work", text: "Work" },
@@ -31,14 +31,11 @@ export default {
       ]
     };
   },
+  computed: {
+    ...mapState(["value"])
+  },
   methods: {
-    handleScroll() {
-      const scrollPos = window.scrollY;
-      const winHeight = window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight;
-      const perc = (100 * scrollPos) / (docHeight - winHeight);
-      this.value = Math.floor(Math.round(perc));
-    }
+    ...mapMutations(["handleScroll"])
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);

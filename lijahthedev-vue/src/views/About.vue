@@ -12,6 +12,7 @@ import appHeader from "@/components/Header/Header.vue";
 import appFooter from "@/components/Footer/Footer.vue";
 import appParallax from "@/components/Content/Parallax.vue";
 import image from "../assets/black-mount.jpg";
+import { mapState, mapMutations } from "vuex";
 
 export default {
   name: "home",
@@ -27,18 +28,14 @@ export default {
         { route: "/about", text: "About" },
         { route: "/skills", text: "Skills" },
         { route: "/work", text: "Work" }
-      ],
-      value: 0
+      ]
     };
   },
+  computed: {
+    ...mapState(["value"])
+  },
   methods: {
-    handleScroll() {
-      const scrollPos = window.scrollY;
-      const winHeight = window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight;
-      const perc = (100 * scrollPos) / (docHeight - winHeight);
-      this.value = Math.floor(Math.round(perc));
-    }
+    ...mapMutations(["handleScroll"])
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);

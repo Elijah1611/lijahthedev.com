@@ -2,25 +2,28 @@
   <div class="skills">
     <v-progress-linear v-model="value" color="blue"></v-progress-linear>
     <app-header :navLinks="links" :image="image" class="scuff"></app-header>
-
-    <v-timeline dark class="smoke">
-      <v-timeline-item v-for="(item, i) in items" :key="i" large>
-        <template v-slot:icon>
-          <v-avatar>
-            <font-awesome-icon :icon="item.icon" :class="iconClasses[i]"></font-awesome-icon>
-          </v-avatar>
-        </template>
-        <template v-slot:opposite>
-          <span :style="{color: '#fff'}">{{item.info}}</span>
-        </template>
-        <v-card :color="item.color">
-          <v-card-title class="display-1 text-shadow">{{item.category}}</v-card-title>
-          <v-card-text class="caption">
-            <li v-for="(skill,i) in item.skills" :key="i" class="ml-3">{{skill}}</li>
-          </v-card-text>
-        </v-card>
-      </v-timeline-item>
-    </v-timeline>
+    <div class="smoke">
+      <v-container>
+        <v-timeline dark>
+          <v-timeline-item v-for="(item, i) in items" :key="i" large>
+            <template v-slot:icon>
+              <v-avatar>
+                <font-awesome-icon :icon="item.icon" :class="iconClasses[i]"></font-awesome-icon>
+              </v-avatar>
+            </template>
+            <template v-slot:opposite>
+              <span :style="{color: '#fff'}">{{item.info}}</span>
+            </template>
+            <v-card :color="item.color">
+              <v-card-title class="headline text-shadow">{{item.category}}</v-card-title>
+              <v-card-text class="caption">
+                <li v-for="(skill,i) in item.skills" :key="i" class="ml-3">{{skill}}</li>
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
+        </v-timeline>
+      </v-container>
+    </div>
     <appFooter></appFooter>
   </div>
 </template>
@@ -29,6 +32,7 @@
 import appHeader from "@/components/Header/Header.vue";
 import appFooter from "@/components/Footer/Footer.vue";
 import image from "../assets/black-sand.jpg";
+import { mapState, mapMutations } from "vuex";
 export default {
   components: {
     appHeader,
@@ -37,8 +41,6 @@ export default {
   data() {
     return {
       image,
-      value: 0,
-
       iconClasses: ["css", "react", "vue", "node", "python"],
       links: [
         { route: "/about", text: "About" },
@@ -94,15 +96,11 @@ export default {
       ]
     };
   },
-
+  computed: {
+    ...mapState(["value"])
+  },
   methods: {
-    handleScroll() {
-      const scrollPos = window.scrollY;
-      const winHeight = window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight;
-      const perc = (100 * scrollPos) / (docHeight - winHeight);
-      this.value = Math.floor(Math.round(perc));
-    }
+    ...mapMutations(["handleScroll"])
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
@@ -118,7 +116,8 @@ export default {
   background: url("../assets/scuff.png");
 }
 .smoke {
-  background: url("../assets/smoke.png") center;
+  background: url("../assets/smoke.png") no-repeat center;
+  background-size: cover;
 }
 
 .text-shadow {

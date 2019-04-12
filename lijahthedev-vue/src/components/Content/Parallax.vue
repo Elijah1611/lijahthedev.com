@@ -4,32 +4,32 @@
       <v-layout align-center column justify-center class="overlay">
         <h2 class="display-2 font-weight-thin mb-3">Paul Scott</h2>
         <h3 class="headline profession">Front-End Developer</h3>
-        <p
-          class="font-weight-thin font-italic body-1 mt-4 mb-0"
-        >"Discretion shall preserve thee, understanding shall keep thee:"</p>
+        <p class="font-weight-thin font-italic body-1 mt-4 mb-0">"{{quote}}"</p>
         <p class="caption">- Proverbs 2:11</p>
       </v-layout>
     </v-parallax>
 
-    <div class="bio">
-      <v-layout align-center column justify-center>
-        <p class="bio-box">
-          <font-awesome-icon icon="home" class="icons"></font-awesome-icon>
-          <span>Born:</span> Laurel, MD
-        </p>
-        <p class="bio-box">
-          <font-awesome-icon icon="hotel" class="icons"></font-awesome-icon>
-          <span>Located:</span> Fort Worth, TX
-        </p>
-        <p class="bio-box">
-          <font-awesome-icon :icon="['fab', 'vuejs']" class="icons"></font-awesome-icon>
-          <span>Learning:</span> Vue.js
-        </p>
-        <p class="bio-box">
-          <font-awesome-icon icon="laptop-code" class="icons"></font-awesome-icon>
-          <span>Hobby:</span> Programming
-        </p>
-      </v-layout>
+    <div class="smoke">
+      <div class="bio">
+        <v-layout align-center column justify-center>
+          <p class="bio-box">
+            <font-awesome-icon icon="home" class="icons"></font-awesome-icon>
+            <span>Born:</span> Laurel, MD
+          </p>
+          <p class="bio-box">
+            <font-awesome-icon icon="hotel" class="icons"></font-awesome-icon>
+            <span>Located:</span> Fort Worth, TX
+          </p>
+          <p class="bio-box">
+            <font-awesome-icon :icon="['fab', 'vuejs']" class="icons"></font-awesome-icon>
+            <span>Learning:</span> Vue.js
+          </p>
+          <p class="bio-box">
+            <font-awesome-icon icon="laptop-code" class="icons"></font-awesome-icon>
+            <span>Hobby:</span> Programming
+          </p>
+        </v-layout>
+      </div>
     </div>
   </main>
 </template>
@@ -40,7 +40,8 @@ export default {
   components: {},
   data() {
     return {
-      image
+      image,
+      quote: "Discretion shall preserve thee, understanding shall keep thee:"
     };
   }
 };
@@ -62,8 +63,11 @@ $shadow-2: #0059ff;
   text-shadow: 1px 0px 1px $shadow-1, 0px 1px 1px $shadow-2;
 }
 
-.bio {
+.smoke {
   background: url("../../assets/smoke.png") left bottom;
+  background-size: cover;
+}
+.bio {
   padding: 5rem 0;
   color: #fff;
 }

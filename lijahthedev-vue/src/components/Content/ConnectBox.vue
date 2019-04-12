@@ -3,7 +3,7 @@
     <v-container>
       <v-layout row wrap>
         <v-flex xs12 sm6 lg5 offset-lg1 v-for="(box, i) in boxes" :key="i" class="pa-1">
-          <v-tooltip right :color="box.color">
+          <v-tooltip top :color="box.color">
             <template v-slot:activator="{ on }">
               <v-btn
                 block

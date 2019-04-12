@@ -1,11 +1,28 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import black_design from "./assets/black-design.jpg";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
+		value: 0,
 		projects: [
+			{
+				title: "Domnoo",
+				description:
+					"A pizza store app for browsing meals & dishes on a menu to create orders",
+				year: 2019,
+				lang: { name: "Vue", color: "#42b983" },
+				color: "red lighten-1",
+				isDark: true,
+				image:
+					"https://firebasestorage.googleapis.com/v0/b/lijahthedev-80367.appspot.com/o/f4c0a86f-b080-45cd-a8a7-06b63cdb4671.jpg?alt=media&token=8d4aeb2f-cc26-4ac9-96a2-de197aae45e8",
+				links: [
+					"https://domnoo-firebase.firebaseapp.com/",
+					"https://github.com/LijahTheDev/Domnoo-Pizza-App"
+				]
+			},
 			{
 				title: "The Venue",
 				description:
@@ -22,26 +39,24 @@ export default new Vuex.Store({
 				]
 			},
 			{
-				title: "Domnoo",
+				title: "LijahTheDev 2018",
 				description:
-					"The Venue is a modern event landing page for future car events",
-				year: 2019,
-				lang: { name: "Vue", color: "#42b983" },
-				color: "red lighten-1",
+					"Old version of this portfolio site made with CSS3 & jQuery",
+				year: 2018,
+				lang: { name: "jQuery", color: "blue" },
+				color: "black",
 				isDark: true,
-				image:
-					"https://firebasestorage.googleapis.com/v0/b/lijahthedev-80367.appspot.com/o/f4c0a86f-b080-45cd-a8a7-06b63cdb4671.jpg?alt=media&token=8d4aeb2f-cc26-4ac9-96a2-de197aae45e8",
+				image: black_design,
 				links: [
-					"https://the-venue-car-events.netlify.com/",
-					"https://github.com/LijahTheDev/The-Venue"
+					"https://lijahthedev.com/",
+					"https://github.com/LijahTheDev/lijahthedev.com"
 				]
 			},
-
 			{
 				title: "Aurora Grove",
 				description:
-					"A Bootstrap website made during a Bootstrap 4 course",
-				year: 2019,
+					"A Bootstrap homepage made during a Bootstrap 4 course",
+				year: 2018,
 				lang: { name: "Bootstrap", color: "#563D7C" },
 				color: "blue",
 				isDark: true,
@@ -55,16 +70,16 @@ export default new Vuex.Store({
 			{
 				title: "Pro Web Solutions",
 				description:
-					"A business practice landing page with CSS Grid, Flexbox. and jQuery",
-				year: 2019,
+					"A business practice homepage with CSS Grid, Flexbox. and jQuery",
+				year: 2018,
 				lang: { name: "CSS", color: "blue" },
 				color: "grey darken-1",
 				isDark: true,
 				image:
 					"https://firebasestorage.googleapis.com/v0/b/lijahthedev-80367.appspot.com/o/homepage-product-office-space.jpg?alt=media&token=5edf02b6-939b-469a-9810-00e9f7dc9309",
 				links: [
-					"https://the-venue-car-events.netlify.com/",
-					"https://github.com/LijahTheDev/The-Venue"
+					"https://lijahthedev.github.io/Pro-Web-Solutions/",
+					"https://github.com/LijahTheDev/Pro-Web-Solutions"
 				]
 			},
 			{
@@ -84,7 +99,7 @@ export default new Vuex.Store({
 			{
 				title: "React Movie Table",
 				description:
-					"A react movie table that I'm working on while learning react",
+					"A React movie table that I worked on while learning React",
 				year: 2019,
 				lang: { name: "React", color: "#61dafb" },
 				color: "yellow lighten-1",
@@ -92,34 +107,33 @@ export default new Vuex.Store({
 				image:
 					"https://firebasestorage.googleapis.com/v0/b/lijahthedev-80367.appspot.com/o/twitterlists-TA.jpg?alt=media&token=ef4b64e3-75ae-4a21-90ab-9773daae27c6",
 				links: [
-					"https://the-venue-car-events.netlify.com/",
-					"https://github.com/LijahTheDev/The-Venue"
+					"https://react-movie-table-lijahthedev.netlify.com/",
+					"https://github.com/LijahTheDev/React-Movie-Table"
+				]
+			},
+			{
+				title: "AirBound",
+				description: "A sneaker landing page",
+				year: 2018,
+				lang: { name: "CSS", color: "blue" },
+				color: "purple lighten-1",
+				isDark: true,
+				image:
+					"https://firebasestorage.googleapis.com/v0/b/lijahthedev-80367.appspot.com/o/286567653029211.png?alt=media&token=f092056e-a16e-4f05-ab96-543b490b4331",
+				links: [
+					"https://lijahthedev.github.io/AirBound/",
+					"https://github.com/LijahTheDev/AirBound"
 				]
 			}
 		]
 	},
-	mutations: {},
-	actions: {}
+	mutations: {
+		handleScroll(state) {
+			const scrollPos = window.scrollY;
+			const winHeight = window.innerHeight;
+			const docHeight = document.documentElement.scrollHeight;
+			const perc = (100 * scrollPos) / (docHeight - winHeight);
+			state.value = Math.floor(Math.round(perc));
+		}
+	}
 });
-
-// color: {
-//   type: String,
-//   default: "white"
-// },
-// image: {
-//   type: String,
-//   required: true
-// },
-// isDark: {
-//   type: Boolean,
-//   default: false
-// },
-// title: {
-//   type: String,
-//   default: "Project Title"
-// },
-// description: {
-//   type: String,
-//   default: "Project Description"
-// }
-// // links
