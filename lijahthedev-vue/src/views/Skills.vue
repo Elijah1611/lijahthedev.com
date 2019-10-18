@@ -41,7 +41,15 @@ export default {
   data() {
     return {
       image,
-      iconClasses: ["css", "react", "vue", "node", "python"],
+      iconClasses: [
+        "css",
+        "react",
+        "vue",
+        "node",
+        "python",
+        "database",
+        "wordpress"
+      ],
       links: [
         { route: "/about", text: "About" },
         { route: "/skills", text: "Skills" },
@@ -76,14 +84,21 @@ export default {
           category: "Vue",
           info:
             "A JavaScript framework for building user interfaces and single-page applications",
-          skills: ["Vue", "Vue Router", "Vuetify", "Vuex", "Vue-Resource"]
+          skills: [
+            "Vue",
+            "Vue Router",
+            "Vuetify",
+            "Vuex",
+            "Vue-Resource",
+            "Nuxt.js"
+          ]
         },
         {
           icon: ["fab", "node-js"],
           color: "#049c01",
           category: "Node",
           info: "JavaScript runtime built on Chrome's V8 JavaScript engine",
-          skills: ["Node", "Express", "MongoDB", "Pug/EJS"]
+          skills: ["Node", "Express", "Mongoose ODM", "Sequelize", "Pug/EJS"]
         },
         {
           icon: ["fab", "python"],
@@ -92,6 +107,21 @@ export default {
           info:
             "Python is an interpreted, high-level, general-purpose programming language",
           skills: ["Django"]
+        },
+        {
+          icon: ["fa", "database"],
+          color: "#ff0000",
+          category: "Databases",
+          info:
+            "A structured set of data held in a computer, especially one that is accessible in various ways.",
+          skills: ["MySQL", "MongoDB", "AWS RDS"]
+        },
+        {
+          icon: ["fab", "wordpress"],
+          color: "#21759b ",
+          category: "Wordpress",
+          info: "A content management system",
+          skills: []
         }
       ]
     };
@@ -142,6 +172,14 @@ export default {
 .python {
   font-size: 2.5rem;
   color: #ffc400;
+}
+.database {
+  font-size: 2.5rem;
+  color: #ff0000;
+}
+.wordpress {
+  font-size: 2.5rem;
+  color: #21759b;
 }
 
 .v-progress-linear {
