@@ -6,11 +6,11 @@
       <v-layout row wrap>
         <v-flex d-flex xs12>
           <v-layout row wrap>
-            <v-flex v-for="n in 2" :key="n" d-flex xs12 md6>
+            <v-flex v-for="n in 3" :key="n" d-flex xs12 md4>
               <ProjectCard :index="n - 1" :height="280"></ProjectCard>
             </v-flex>
-            <v-flex v-for="n in 6" :key="n + 1" d-flex xs12 sm4>
-              <ProjectCard :index="(2 + n) -1" :height="200"></ProjectCard>
+            <v-flex v-for="n in 6" :key="n + 2" d-flex xs12 sm4>
+              <ProjectCard :index="(3 + n) -1" :height="200"></ProjectCard>
             </v-flex>
           </v-layout>
         </v-flex>

@@ -46,7 +46,7 @@ export default {
           icon: ["fas", "file-alt"],
           color: "green",
           link:
-            "https://drive.google.com/file/d/1S5m1igMzBC4oM7jiZWMpBxTPgYIEUk-r/view?usp=sharing"
+            "https://drive.google.com/open?id=10I9LLQmfzwQ_kUTvi6PrwrUVKfZofryQ"
         },
         {
           name: "YouTube",
