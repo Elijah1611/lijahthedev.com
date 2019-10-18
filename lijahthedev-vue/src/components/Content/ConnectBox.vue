@@ -46,11 +46,7 @@ export default {
           icon: ["fas", "file-alt"],
           color: "green",
           link:
-<<<<<<< HEAD
-            "https://drive.google.com/file/d/1aU8apzrdcIxAqlzfwT04R6OtPInFaTmH/view?usp=sharing"
-=======
             "https://drive.google.com/open?id=10I9LLQmfzwQ_kUTvi6PrwrUVKfZofryQ"
->>>>>>> lijahthedev-vue
         },
         {
           name: "YouTube",

@@ -62,15 +62,9 @@ export default new Vuex.Store({
 				isDark: true,
 				image: black_design,
 				links: [
-<<<<<<< HEAD
-					"https://lijahthedev2018.netlify.com",
-					"https://github.com/LijahTheDev/lijahthedev.com/tree/lijahthedev-2018"
-				]
-=======
 					'https://lijahthedev.com/',
 					'https://github.com/LijahTheDev/lijahthedev.com',
 				],
->>>>>>> lijahthedev-vue
 			},
 			{
 				title: 'Aurora Grove',
