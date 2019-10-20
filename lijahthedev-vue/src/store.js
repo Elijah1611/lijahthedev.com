@@ -12,7 +12,7 @@ export default new Vuex.Store({
 				title: 'Songs & Hymns',
 				description: 'A music web app for songs & church hymns',
 				year: 2019,
-				lang: { name: 'Nuxt', color: '42b983' },
+				lang: { name: 'Nuxt', color: '#42b983' },
 				color: 'red',
 				isDark: true,
 				image:
@@ -62,7 +62,7 @@ export default new Vuex.Store({
 				isDark: true,
 				image: black_design,
 				links: [
-					'https://lijahthedev.com/',
+					'https://lijahthedev2018.netlify.com/',
 					'https://github.com/LijahTheDev/lijahthedev.com',
 				],
 			},
